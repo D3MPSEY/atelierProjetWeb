@@ -10,5 +10,9 @@ router
     .route('/login')
     .get(ctrlAuth.fakeRegister)
     .post(mdlAuth.loginIsValid, ctrlAuth.login);
+
+router
+    .route('/article')
+    
 // Même chose que sur la même ligne mais permet de faire des post des get etc sur la même route
 module.exports = router;

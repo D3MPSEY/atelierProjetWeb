@@ -3,7 +3,7 @@ const User = require('../models/user');
 
 const login = async (req, res) => {
     const user = await User.findOne({username: req.body.username, password: req.body.password}).exec()
-    if /*┳━┳*/ (user) {
+    if (user) {
         res.sendStatus(204);
     } else {
         res.sendStatus(401);
