@@ -1,0 +1,23 @@
+.header-menu {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    color: white;
+}
+
+@media screen and (min-width: 751px) {
+    .menu-hamburger {
+        display:none
+    }
+}
+
+@media  screen and (max-width: 750px){
+    .header-menu {
+        display: none
+    }
+}
+button{
+    margin:10px;
+}
