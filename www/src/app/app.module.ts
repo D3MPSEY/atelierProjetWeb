@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './static/header/header.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu'
@@ -20,7 +20,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ArticleComponent } from './blog/article/article.component';
+import { DetailComponent } from './blog/detail/detail.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     RegisterComponent,
     CreateComponent,
     ListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ArticleComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

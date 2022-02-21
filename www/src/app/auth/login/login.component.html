@@ -1,1 +1,28 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-title>Se connecter</mat-card-title>
+    <mat-card-content>
+        <div>
+            <form class="test" (ngSubmit)="submit()">
+                <mat-form-field>
+                    <input matInput placeholder="Adresse courriel" formControlName="email"
+                        placeholder="nom de l'utilisateur">
+                    <mat-error *ngIf="loginForm.get('email')">
+                        Veuillez entrer une adresse courriel valide.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Mot de passe"
+                        formControlName="password">
+                    <mat-error *ngIf="loginForm.get('password')">
+                        Veuillez entrer un mot de passe valide.
+                    </mat-error>
+                    <button mat-icon-button matSuffix (click)="hide = !hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button id="btn-register" type="submit" mat-raised-button color="primary">Se connecter</button>
+                <a mat-stroked-button routerLink="/inscription">Vous n'avez pas de compte ?</a>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

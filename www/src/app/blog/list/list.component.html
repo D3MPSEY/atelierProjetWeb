@@ -1,14 +1,6 @@
-<p>list works!</p>
-
 <div class="list">
-    <mat-card class="item">
-        <mat-card-title>
-            Les poissons sont en danger
-        </mat-card-title>
-        <mat-card-subtitle> par Joseph</mat-card-subtitle>
-        <mat-card-content> Il parrait que Francois a vraiment fais des conneries...</mat-card-content>
-        <mat-card-actions align="end">
-            <mat-card-subtitle>Publié il y a 42 ans</mat-card-subtitle>
-          </mat-card-actions>
-    </mat-card>
+    <ng-container *ngFor="let article of articles; let i = index">
+        <app-article [article]="article" *ngIf="i != selectedArticle" (click)="changeSelected(i)"></app-article>
+        <app-detail [article]="article" *ngIf="i == selectedArticle"></app-detail>
+    </ng-container>
 </div>
